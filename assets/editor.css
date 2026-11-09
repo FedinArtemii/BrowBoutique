@@ -1,0 +1,5 @@
+@import url("fonts.css");
+.editor-styles-wrapper { font-family:"Golos Text",Arial,sans-serif; }
+.editor-styles-wrapper h1,.editor-styles-wrapper h2 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; }
+.editor-styles-wrapper .hero,.editor-styles-wrapper .panel,.editor-styles-wrapper .contact-panel { padding:1.75rem; }
+.editor-styles-wrapper .pearl,.editor-styles-wrapper .contact-panel { background:#f3e1ca; }
