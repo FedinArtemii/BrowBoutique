@@ -16,6 +16,7 @@ const html = await response.text();
 const title = html.match(/<title>[^<]+<\/title>/)?.[0];
 const body = html.match(/<header class="nav site-header"[\s\S]*?<\/main>/)?.[0];
 const description = html.match(/<meta name="description" content="[^"]+">/)?.[0];
+const styleVersion = html.match(/\/assets\/site\.css(\?ver=[\w.-]+)['"]/)?.[1] ?? "";
 if (!title || !description || !body || !body.includes('id="contacts"')) {
   throw new Error("The WordPress home page did not render.");
 }
@@ -48,7 +49,7 @@ ${description}
 <meta property="og:image" content="${publicRoot}assets/images/profile.webp">
 <link rel="canonical" href="${publicRoot}">
 <link rel="icon" href="./assets/images/logo.png">
-<link rel="stylesheet" href="./assets/site.css">
+<link rel="stylesheet" href="./assets/site.css${styleVersion}">
 <link rel="stylesheet" href="./assets/motion/motion.css">
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script type="module" src="./assets/site.js"></script>

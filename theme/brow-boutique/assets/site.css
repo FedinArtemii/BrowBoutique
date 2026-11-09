@@ -46,12 +46,11 @@ body:not(.home) .site-header { position:relative; background:var(--pearl); }
 .hero-copy p { font-size:clamp(16px,1.34vw,20px); }
 .wp-block-buttons { margin-top:4px; }
 .wp-block-button__link {
-  min-height:52px; display:inline-flex; align-items:center; gap:22px;
+  min-height:52px; display:inline-flex; align-items:center;
   background:#492f22; color:#fffaf5; border:0; border-radius:0;
   font:500 15px/1.2 var(--sans); padding:12px 20px; text-decoration:none;
   transition:background 150ms, transform 150ms var(--ease);
 }
-.wp-block-button__link::after { content:""; width:16px; height:16px; flex:none; background:currentColor; mask:center / contain no-repeat url("arrow.svg"); }
 .wp-block-button__link:hover,.wp-block-button__link:focus-visible { background:#674331; }
 @media(hover:hover) { .wp-block-button__link:hover { transform:translateY(-2px); } }
 .wp-block-button__link:active { transform:translateY(1px); }
