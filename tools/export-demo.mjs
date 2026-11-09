@@ -14,7 +14,7 @@ const response = await fetch(local);
 if (!response.ok) throw new Error("WordPress responded with " + response.status);
 const html = await response.text();
 const title = html.match(/<title>[^<]+<\/title>/)?.[0];
-const body = html.match(/<a class="skip-link"[\s\S]*?<\/footer>/)?.[0];
+const body = html.match(/<header class="nav site-header"[\s\S]*?<\/main>/)?.[0];
 const description = html.match(/<meta name="description" content="[^"]+">/)?.[0];
 if (!title || !description || !body || !body.includes('id="contacts"')) {
   throw new Error("The WordPress home page did not render.");
@@ -50,6 +50,7 @@ ${description}
 <link rel="icon" href="./assets/images/logo.png">
 <link rel="stylesheet" href="./assets/site.css">
 <link rel="stylesheet" href="./assets/motion/motion.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script type="module" src="./assets/site.js"></script>
 </head>
 <body class="home">

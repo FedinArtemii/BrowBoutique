@@ -3,13 +3,14 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="skip-link" href="#main">Перейти к содержанию</a>
-<header class="site-header">
-    <div class="site-header-inner">
+<header class="nav site-header">
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <div class="wrap site-header-inner">
         <?php if ( has_custom_logo() ) : ?>
             <?php the_custom_logo(); ?>
         <?php else : ?>

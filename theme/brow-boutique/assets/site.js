@@ -1,9 +1,6 @@
 import "./motion/motion.js";
 import "./moments/moments.js";
 
-const hero = document.querySelector(".hero");
-hero?.setAttribute("data-enter", "");
-
 const toggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector("#studio-menu");
 const narrow = matchMedia("(max-width: 760px)");

@@ -36,6 +36,7 @@ function brow_boutique_image( $content, $block ) {
     if ( in_array( 'hero-photo', $classes, true ) && $tags->next_tag( 'img' ) ) {
         $tags->set_attribute( 'fetchpriority', 'high' );
         $tags->set_attribute( 'loading', 'eager' );
+        $tags->set_attribute( 'data-enter-media', '' );
     }
     if ( in_array( 'develop-photo', $classes, true ) && $tags->next_tag( 'figure' ) ) {
         $tags->set_attribute( 'data-moment', 'picture-develops' );
@@ -44,6 +45,18 @@ function brow_boutique_image( $content, $block ) {
     return $tags->get_updated_html();
 }
 add_filter( 'render_block_core/image', 'brow_boutique_image', 10, 2 );
+
+function brow_boutique_hero( $content, $block ) {
+    if ( ( $block['attrs']['className'] ?? '' ) !== 'hero' ) {
+        return $content;
+    }
+    $tags = new WP_HTML_Tag_Processor( $content );
+    if ( $tags->next_tag( 'section' ) ) {
+        $tags->set_attribute( 'data-enter', '' );
+    }
+    return $tags->get_updated_html();
+}
+add_filter( 'render_block_core/group', 'brow_boutique_hero', 10, 2 );
 
 function brow_boutique_head() {
     if ( ! is_front_page() ) {
