@@ -54,6 +54,9 @@ function brow_boutique_hero( $content, $block ) {
     if ( $tags->next_tag( 'section' ) ) {
         $tags->set_attribute( 'data-enter', '' );
     }
+    if ( $tags->next_tag( 'h1' ) ) {
+        $tags->set_attribute( 'data-enter-whole', '' );
+    }
     return $tags->get_updated_html();
 }
 add_filter( 'render_block_core/group', 'brow_boutique_hero', 10, 2 );
