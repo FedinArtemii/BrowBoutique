@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "74rem",
+      "wideSize": "86rem"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "milk",
+          "name": "Молочный",
+          "color": "#faf6f3"
+        },
+        {
+          "slug": "pearl",
+          "name": "Жемчужный",
+          "color": "#f3e1ca"
+        },
+        {
+          "slug": "cocoa",
+          "name": "Какао",
+          "color": "#39251b"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "spacing": {
+      "blockGap": "0"
+    },
+    "color": {
+      "background": "#faf6f3",
+      "text": "#39251b"
+    }
+  }
+}
