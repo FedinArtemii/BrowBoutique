@@ -17,12 +17,13 @@
 <link rel="icon" href="./assets/images/logo.png">
 <link rel="stylesheet" href="./assets/site.css">
 <link rel="stylesheet" href="./assets/motion/motion.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script type="module" src="./assets/site.js"></script>
 </head>
 <body class="home">
-<a class="skip-link" href="#main">Перейти к содержанию</a>
-<header class="site-header">
-    <div class="site-header-inner">
+<header class="nav site-header">
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <div class="wrap site-header-inner">
                     <a class="studio-logo" href="./">
                 <img src="./assets/images/logo.png" width="120" height="120" alt="Бутик Бровей">
             </a>
@@ -33,9 +34,9 @@
 </header>
 <main id="main" tabindex="-1">
 
-<section id="home" class="wp-block-group hero is-layout-flow wp-block-group-is-layout-flow">
+<section data-enter="" id="home" class="wp-block-group hero is-layout-flow wp-block-group-is-layout-flow">
 
-<figure class="wp-block-image size-full hero-photo"><img decoding="async" fetchpriority="high" loading="eager" src="./assets/images/profile.webp" alt="Бровь и ресницы крупным планом на портрете в профиль" /></figure>
+<figure class="wp-block-image size-full hero-photo"><img decoding="async" data-enter-media="" fetchpriority="high" loading="eager" src="./assets/images/profile.webp" alt="Бровь и ресницы крупным планом на портрете в профиль" /></figure>
 
 
 
@@ -205,9 +206,11 @@
 
 
 
-<section id="contacts" class="wp-block-group contact-panel is-layout-flow wp-block-group-is-layout-flow">
+<section id="contacts" class="wp-block-group panel contact-panel contacts is-layout-flow wp-block-group-is-layout-flow">
 
-<div class="wp-block-group wrap contact-wrap is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group wrap panel-grid is-layout-flow wp-block-group-is-layout-flow">
+
+<div class="wp-block-group panel-copy contact-wrap is-layout-flow wp-block-group-is-layout-flow">
 
 <h2 class="wp-block-heading">Запись в студию</h2>
 
@@ -237,14 +240,14 @@
 
 </div>
 
+
+
+<figure class="wp-block-image size-full panel-photo"><img decoding="async" src="./assets/images/visit.webp" alt="Иллюстрация: мастер укладывает бровь клиентки щёточкой" /></figure>
+
+</div>
+
 </section>
 
 </main>
-<footer class="site-footer">
-    <div class="wrap">
-        <p>Бутик Бровей · Челябинск</p>
-        <a href="https://t.me/browtique_2">Telegram</a>
-    </div>
-</footer>
 </body>
 </html>
